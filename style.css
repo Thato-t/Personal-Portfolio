@@ -1,0 +1,134 @@
+@import "tailwindcss";
+
+@font-face{
+    font-family: Poppins;
+    src: url('./Fonts/Poppins-Regular.ttf');
+}
+
+
+*,
+*::before,
+*::after{
+    /* outline:1px solid red; */
+    scroll-behavior: smooth;
+}
+body{
+    background-color:#E7E4DF;
+    font-family:Poppins, Verdana, Helvetica, sans-serif;
+}
+nav{
+    position:fixed;
+    background-color:#E7E4DF;
+    width:84.6%;
+    z-index: 10;
+    margin-bottom: 100px;
+    top:0;
+}
+.logo{
+    font-weight: 800;
+}
+.navigation{
+    gap:20px
+}
+.nav{
+   font-weight:600;
+   position:relative;
+}
+.nav::before{
+    content:"";
+    height:2px;
+    position:absolute;
+    background-color: black;
+    width:0;
+    top:22px;
+}
+.nav::before::hover{
+    width:100%;
+}
+.home-wrapper{
+    margin-top:60px;
+}
+.heading{
+    line-height:80px;
+}
+.home-box1{
+    width:400px;
+}
+.dev-img{
+    transform:translate(-60px, 80px);
+    align-items: bottom;
+}
+.sm{
+    width:100px;
+}
+.sm-icons{
+    width:20px;
+    height:20px;
+}
+.blocks{
+    margin-bottom:5px;
+}
+.certification{
+    width:120px;
+    height:120px;
+    border:1px dashed black;
+    padding:10px;
+    border-radius:6px;
+    margin-right: 10px;
+}
+.tech-stack{
+    padding:10px;
+    border-radius:6px;
+    display:flex;
+    gap:10px;
+    border:1px dashed black;
+    width:145px;
+    margin-right:5px
+}
+.projects-wrapper{
+    border-radius:6px;
+    border:none;
+}
+.project-name{
+    width:35%;
+    margin-right:10px;
+    border:none;
+}
+.project-explanation{
+    color:hsl(38, 14%, 29%);
+}
+.project-img{
+    width: 55%;
+}
+.links-website{
+    font-weight:200;
+    font-size:.8rem;
+    transition:ease 300ms;
+    margin-right:7px;
+    font-style:italic;
+}
+.links-website:hover{
+    border:1px dashed hsl(38, 14%, 99%);
+    border-radius:7px;
+    padding:5px;
+}
+.technology-used{
+    margin-right:7px;
+    padding-inline:5px;
+    border-radius:6px;
+    border:1px dashed #E7E4DF;
+}
+.contacts-wrapper{
+    gap:40px;
+}
+.cv{
+    padding:10px;
+    border:1px dashed black;
+    border-radius:6px;
+    width:fit-content;
+    cursor:pointer;
+    transition:ease 300ms;
+}
+.cv:hover{
+    box-shadow: -3px 0px 1px black;
+}
