@@ -11,14 +11,24 @@
     <div class="wrapper mx-26">
         <nav class="flex justify-between py-2.5">
             <a href="#"><div class="logo"><img src="./images/DEV.png" alt="logo"></div></a>
-            <div class="navigator">
+            <div class="navigatorOne">
                 <ul class="flex navigation">
                     <a href="#" class="nav"><li>Home</li></a>
                     <a href="#projects" class="nav"><li>Projects</li></a>
                     <a href="#contacts" class="nav"><li>Contacts</li></a>
                 </ul>
             </div>
+            <div class="navigatorTwo hiding">
+                <img src="./icons/menu-alt-right-regular-24.png" alt="icon" class="navbar-menu cursor-pointer">
+            </div>
         </nav>
+        <ul class="responsive-navigation hiding mt-12 w-fit pl-3 pr-16 absolute z-20 right-27 top-0">
+            <a href="#" class="nav"><li>Home</li></a>
+            <a href="#projects" class="nav"><li>Projects</li></a>
+            <a href="#contacts" class="nav"><li>Contacts</li></a>
+            <a href="" class="my-3 underline github-responsive"><li>Github</li></a>
+
+        </ul>
         <main>
             <!------------ HOME --------->
             <div class="home-wrapper px-20" id="home">
@@ -75,7 +85,7 @@
                 <!------------ TECHNOLOGIES & CERTIFICATES --------->
             <div class="projects-wrapper bg-black text-white p-10 mb-10" id="projects">
                 <div class="project-heading flex">
-                    <img src="./icons/dev-to-logo-24.png" alt="" class="project-illustration size-10">
+                    <img src="./images/DEV.png" alt="" class="project-illustration size-10">
                     <p class="text-5xl mb-10 font-semibold">Projects</p>
                 </div>
                 <div class="project-name-img flex justify-between mb-6">

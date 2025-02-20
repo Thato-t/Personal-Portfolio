@@ -66,7 +66,7 @@ nav{
     transform:translate(-20px, 100px);
     align-items: bottom;
     width:150px;
-    height:150px
+    height:150px;
 }
 .sm{
     width:100px;
@@ -103,6 +103,9 @@ nav{
 .projects-wrapper{
     border-radius:6px;
     border:none;
+}
+.project-illustration{
+    margin-right:5px;
 }
 .project-name{
     width:35%;
@@ -147,3 +150,160 @@ nav{
 .cv:hover{
     box-shadow: -3px 0px 1px black;
 }
+.hiding{
+    display: none;
+}
+.responsive-navigation{
+    background-color:hsl(38, 14%, 79%);
+    border-radius:6px;
+    padding-bottom:22px;
+}
+.github-responsive{
+    font-size: 1rem;
+}
+
+@media (max-width:1120px) {
+    nav{
+        width:81%;
+    }
+    .technologies-certification-wrapper{
+        width:fit-content;
+        margin-inline:auto;
+        display:block;
+    }
+    .certificates{
+        width:fit-content;
+        margin-inline:auto;
+        margin-bottom:20px;
+    }
+    @media (max-width:924px){
+        nav{
+            width:77.5%;
+        }
+        .heading{
+            font-size:3.5rem
+        }
+        .dev-img{
+            transform:translate(0);
+            align-items: bottom;
+            width:70px;
+            height:70px
+        }
+        
+        .project-name-img{
+            display:block;
+            width:fit-content;
+            margin-inline:auto;
+        }
+        .project-name{
+            width:fit-content;
+            margin-right:0;
+        }
+        .project-img{
+            width:auto;
+            margin-top:20px;
+        }
+    }
+    }
+    @media (max-width: 814px){
+        nav{
+            width:75%;
+        }
+        .contacts-wrapper{
+            display:block;
+            border:1px solid red
+        }
+    }
+    @media (max-width:700px){
+        .wrapper{
+            margin-inline:40px;
+        }
+        nav{
+            width:88%;
+        }
+        .heading-contact-info{
+            font-size:3rem
+        }
+        .navigatorOne{
+            display:none
+        }
+        .navigatorTwo{
+            display:block
+        }
+        .home-wrapper{
+            padding-inline:40px;
+        }
+    }
+    @media (max-width:546px){
+        nav{
+            width:89%;
+        }
+        .tech-stack{
+            padding:10px;
+            font-size:.9rem;
+            width:130px;
+            margin-right:5px
+        }
+        .wrapper{
+            margin-inline: 30px;
+        }
+    }
+    @media (max-width:458px){
+        nav{
+            width:100%;
+        }
+        .tech-stack{
+            padding:10px;
+            font-size:.9rem;
+            width:130px;
+            margin-right:5px
+        }
+        .wrapper{
+            margin-inline: 0;
+        }
+        .technologies-certification-wrapper{
+            border:1px solid red;
+            margin-left:-30px;
+        }
+    }
+    @media (max-width:416px){
+        .technologies-certification-wrapper{
+            border:1px solid red;
+            margin-inline:auto;
+            /* margin-left:-35px; */
+        }
+        .dev-img{
+            display:none;
+        }
+        
+        .responsive-navigation{
+            right:0
+        }
+        .technologies-used{
+            flex-wrap: wrap;
+            margin-bottom:5px;
+        }
+        .tech-stack{
+            padding:5px;
+            font-size:.6rem;
+            width:100px;
+            margin-right:5px;
+            display:flex;
+        }
+    }
+    @media (max-width:320px){
+        .project-img{
+            width:auto;
+        }
+        .responsive-navigation{
+            right:0
+        }
+        .contact-info{
+            font-size:0.9rem
+        }
+        .heading{
+            font-size: 3rem;
+            line-height: 50px;
+        }
+        
+    }

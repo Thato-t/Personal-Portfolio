@@ -3,6 +3,8 @@ const typeOfDeveloper = document.querySelector('.type-developer');
 const typeOfDeveloperImg = document.querySelector('.dev-img');
 const name = document.querySelector('.name');
 const cv = document.querySelector('.cv');
+const navbarMenu = document.querySelector('.navbar-menu');
+const resNavbar = document.querySelector('.responsive-navigation'); 
 
 setTimeout(() => {
     headingTypeOfDeveloper.textContent = 'Back-end';
@@ -16,3 +18,8 @@ setTimeout(() => {
 //     typeOfDeveloper.textContent = 'full-stack';
 //     typeOfDeveloperImg.src = './images/FS.png';
 // }, 6000)
+
+navbarMenu.addEventListener('click', () => {
+    resNavbar.classList.toggle('hiding');
+})
+
