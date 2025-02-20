@@ -5,7 +5,9 @@
     src: url('./Fonts/Poppins-Regular.ttf');
 }
 
-
+::-webkit-scrollbar{
+    background-color:#E7E4DF;
+}
 *,
 *::before,
 *::after{
@@ -25,7 +27,8 @@ nav{
     top:0;
 }
 .logo{
-    font-weight: 800;
+    width:30px;
+    height:30px
 }
 .navigation{
     gap:20px
@@ -33,16 +36,21 @@ nav{
 .nav{
    font-weight:600;
    position:relative;
+   padding-inline:2px
 }
 .nav::before{
     content:"";
     height:2px;
     position:absolute;
-    background-color: black;
+    background-color: hsl(0, 0%, 10%);
     width:0;
-    top:22px;
+    top:24px;
+    transition:0.3s;
 }
-.nav::before::hover{
+.nav:hover{
+    color:hsl(0, 0%, 10%)
+}
+.nav:hover::before{
     width:100%;
 }
 .home-wrapper{
@@ -55,8 +63,10 @@ nav{
     width:400px;
 }
 .dev-img{
-    transform:translate(-60px, 80px);
+    transform:translate(-20px, 100px);
     align-items: bottom;
+    width:150px;
+    height:150px
 }
 .sm{
     width:100px;
@@ -74,7 +84,12 @@ nav{
     border:1px dashed black;
     padding:10px;
     border-radius:6px;
+    cursor:pointer;
     margin-right: 10px;
+    transition:ease 300ms
+}
+.certification:hover{
+    transform: scale(2.7);
 }
 .tech-stack{
     padding:10px;
