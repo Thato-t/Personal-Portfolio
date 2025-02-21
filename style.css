@@ -157,6 +157,7 @@ nav{
     background-color:hsl(38, 14%, 79%);
     border-radius:6px;
     padding-bottom:22px;
+    position:fixed;
 }
 .github-responsive{
     font-size: 1rem;
@@ -211,7 +212,6 @@ nav{
         }
         .contacts-wrapper{
             display:block;
-            border:1px solid red
         }
     }
     @media (max-width:700px){
@@ -232,6 +232,10 @@ nav{
         }
         .home-wrapper{
             padding-inline:40px;
+        }
+        .responsive-navigation{
+            right:0;
+            margin-right:25px
         }
     }
     @media (max-width:546px){
@@ -262,13 +266,11 @@ nav{
             margin-inline: 0;
         }
         .technologies-certification-wrapper{
-            border:1px solid red;
             margin-left:-30px;
         }
     }
     @media (max-width:416px){
         .technologies-certification-wrapper{
-            border:1px solid red;
             margin-inline:auto;
             /* margin-left:-35px; */
         }
@@ -296,7 +298,7 @@ nav{
             width:auto;
         }
         .responsive-navigation{
-            right:0
+            right:0;
         }
         .contact-info{
             font-size:0.9rem
@@ -305,5 +307,14 @@ nav{
             font-size: 3rem;
             line-height: 50px;
         }
-        
+        .blocks,
+        .certificates{
+            flex-wrap: wrap;
+            /* margin-inline:auto;
+            margin-bottom:4px; */
+
+        }
+        .projects-wrapper{
+            width:100%
+        }
     }
