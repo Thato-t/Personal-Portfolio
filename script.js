@@ -6,11 +6,11 @@ const cv = document.querySelector('.cv');
 const navbarMenu = document.querySelector('.navbar-menu');
 const resNavbar = document.querySelector('.responsive-navigation'); 
 
-setTimeout(() => {
-    headingTypeOfDeveloper.textContent = 'Back-end';
-    typeOfDeveloper.textContent = 'back-end';
-    typeOfDeveloperImg.src = './images/BE.png';
-}, 5000)
+// setTimeout(() => {
+//     headingTypeOfDeveloper.textContent = 'Back-end';
+//     typeOfDeveloper.textContent = 'back-end';
+//     typeOfDeveloperImg.src = './images/BE.png';
+// }, 5000)
 
 // TODO UNCOMMENT THIS AFTER GETTING A HANG OF THE BACKEND SIDE
 // setTimeout(() => {
