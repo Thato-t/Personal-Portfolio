@@ -6,18 +6,57 @@ const cv = document.querySelector('.cv');
 const navbarMenu = document.querySelector('.navbar-menu');
 const resNavbar = document.querySelector('.responsive-navigation'); 
 
-// setTimeout(() => {
-//     headingTypeOfDeveloper.textContent = 'Back-end';
-//     typeOfDeveloper.textContent = 'back-end';
-//     typeOfDeveloperImg.src = './images/BE.png';
-// }, 5000)
+// Store the default values
+const defaultHeading = headingTypeOfDeveloper.textContent;
+const defaultType = typeOfDeveloper.textContent;
+const defaultImg = typeOfDeveloperImg.src;
 
-// TODO UNCOMMENT THIS AFTER GETTING A HANG OF THE BACKEND SIDE
-// setTimeout(() => {
-//     headingTypeOfDeveloper.textContent = 'Full-Stack';
-//     typeOfDeveloper.textContent = 'full-stack';
-//     typeOfDeveloperImg.src = './images/FS.png';
-// }, 6000)
+// Values to switch between
+const states = [
+    {
+        heading: defaultHeading,
+        type: defaultType,
+        img: defaultImg
+    },
+    {
+        heading: 'Junior Back-end',
+        type: 'back-end',
+        img: './images/BE.png'
+    },
+    {
+        heading: 'Junior Full-Stack',
+        type: 'full-stack',
+        img: './images/FS.png'
+    }
+];
+
+let currentState = 0;
+
+function animateSwitch() {
+    headingTypeOfDeveloper.classList.add('switch-animate', 'switch-glow');
+    typeOfDeveloper.classList.add('switch-animate', 'switch-glow');
+    typeOfDeveloperImg.classList.add('switch-animate', 'switch-pop');
+    setTimeout(() => {
+        headingTypeOfDeveloper.classList.remove('switch-animate');
+        typeOfDeveloper.classList.remove('switch-animate');
+        typeOfDeveloperImg.classList.remove('switch-animate');
+    }, 400);
+    setTimeout(() => {
+        headingTypeOfDeveloper.classList.remove('switch-glow');
+        typeOfDeveloper.classList.remove('switch-glow');
+        typeOfDeveloperImg.classList.remove('switch-pop');
+    }, 900);
+}
+
+setInterval(() => {
+    currentState = (currentState + 1) % states.length;
+    animateSwitch();
+    setTimeout(() => {
+        headingTypeOfDeveloper.textContent = states[currentState].heading;
+        typeOfDeveloper.textContent = states[currentState].type;
+        typeOfDeveloperImg.src = states[currentState].img;
+    }, 200); // Change value mid-animation
+}, 2000);
 
 navbarMenu.addEventListener('click', () => {
     resNavbar.classList.toggle('hiding');
