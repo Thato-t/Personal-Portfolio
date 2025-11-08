@@ -5,6 +5,9 @@ const name = document.querySelector('.name');
 const cv = document.querySelector('.cv');
 const navbarMenu = document.querySelector('.navbar-menu');
 const resNavbar = document.querySelector('.responsive-navigation'); 
+const technologiesBtn = document.querySelector('.technologies-btn');
+const certificates = document.querySelector('.certificates');
+const technologies = document.querySelector('.technologies');
 
 // Store the default values
 const defaultHeading = headingTypeOfDeveloper.textContent;
@@ -32,10 +35,11 @@ const states = [
 
 let currentState = 0;
 
+// *Animations
 function animateSwitch() {
-    headingTypeOfDeveloper.classList.add('switch-animate', 'switch-glow');
-    typeOfDeveloper.classList.add('switch-animate', 'switch-glow');
-    typeOfDeveloperImg.classList.add('switch-animate', 'switch-pop');
+    headingTypeOfDeveloper.classList.add('switch-animate');
+    typeOfDeveloper.classList.add('switch-animate');
+    typeOfDeveloperImg.classList.add('switch-animate');
     setTimeout(() => {
         headingTypeOfDeveloper.classList.remove('switch-animate');
         typeOfDeveloper.classList.remove('switch-animate');
@@ -60,5 +64,18 @@ setInterval(() => {
 
 navbarMenu.addEventListener('click', () => {
     resNavbar.classList.toggle('hiding');
-})
+});
 
+
+technologiesBtn.addEventListener('click', () => {
+    const text = technologiesBtn.textContent.trim();
+    if (text === 'Certificates') {
+        technologiesBtn.textContent = 'Technologies';
+        technologies.classList.remove('.hide');
+        certificates.classList.add('.hide');
+    } else{
+        technologiesBtn.textContent = 'Certificates';
+        certificates.classList.remove('.hide');
+        technologies.classList.add('.hide')
+    }
+})

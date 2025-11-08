@@ -67,6 +67,12 @@ nav{
     transform: translateY(40px);
     animation: slideInHome 1s 0.5s cubic-bezier(.4,2,.6,1) forwards;
 }
+.hide{
+    display: none;
+}
+.unhide{
+    display: flex
+}
 @keyframes bodyFadeIn {
     to {
         opacity: 1;
