@@ -67,15 +67,16 @@ navbarMenu.addEventListener('click', () => {
 });
 
 
-technologiesBtn.addEventListener('click', () => {
-    const text = technologiesBtn.textContent.trim();
-    if (text === 'Certificates') {
-        technologiesBtn.textContent = 'Technologies';
-        technologies.classList.remove('.hide');
-        certificates.classList.add('.hide');
-    } else{
-        technologiesBtn.textContent = 'Certificates';
-        certificates.classList.remove('.hide');
-        technologies.classList.add('.hide')
-    }
-})
+// technologiesBtn.addEventListener('click', () => {
+//     const text = technologiesBtn.textContent.trim();
+//     if (text === 'Certificates') {
+//         technologiesBtn.textContent = 'Technologies';
+//         technologies.classList.remove('.hide');
+//         certificates.classList.add('.hide');
+//     }
+//      else{
+//         technologiesBtn.textContent = 'Certificates';
+//         certificates.classList.remove('.hide');
+//         technologies.classList.add('.hide')
+//     }
+// })
